@@ -1,0 +1,456 @@
+/* universal styles */
+html{
+  font-size: 16px;
+  font-family: Verdana;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+ margin-top: 0;
+}
+
+/* navigation */
+.desktop-header{
+  display: flex;
+  position: fixed;
+  align-items: center;
+  flex-grow: 1;
+  z-index: 1;
+  width: 100%;
+  height: 4rem;
+  border-bottom: 1px solid seashell;
+  justify-content: space-between;
+  background-color: white;
+}
+
+header img{
+  padding-left: 10px;
+  height: 2rem;
+}
+
+.title{
+  flex-grow: inherit;
+  font-size: 1.75rem;
+}
+
+.title strong{
+  color: rgba(190,30,50);
+}
+
+nav{
+  margin-right: 1.5rem;
+}
+
+nav span{
+  padding: 0.9rem;
+  font-size: 1.25rem;
+}
+
+
+.mobile-header{
+  display: none;
+}
+
+/* media query - navigation */
+@media only screen and (max-width: 650px){
+  .mobile-header{
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    width: 100%;
+    position: fixed;
+    height: 4rem;
+    z-index: 5;
+    background-color: white;
+  }
+
+  .mobile-header img{
+    padding-top: 1rem;
+  }
+
+  .desktop-header{
+    display: none;
+  }
+}
+
+/* container 1 - start here */
+.container1{
+  display: flex;
+  width: 100%;
+  top: 4rem;
+  position: relative;
+  margin: 0;
+  flex-direction: row;
+  background-color: rgba(180,85,85);
+}
+
+.banner{
+  width: 60%;
+}
+
+.banner img{
+  width: 100%;
+  padding: 2rem 1.5rem;
+}
+
+.learn{
+  width: 30%;
+  margin: auto;
+}
+
+.learn h2{
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.start-button{
+ background-color: rgba(300,80,36);
+}
+
+.start-button:hover {
+  background-color: rgba(255,152,77);
+  transition: background-color 500ms ease;
+}
+
+
+.start-button p{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+  text-align: center;
+}
+
+/* media query - container 1 */
+
+@media only screen and (max-width: 650px){
+  .container1{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner{
+    width: 100%;
+  }
+
+  .banner img{
+    width: 100%;
+    padding: 0rem;
+  }
+
+  .learn{
+    width: 100%;
+    margin: 2rem 1rem;
+  }
+
+  .learn h2{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .start-button{
+    width: 90%;
+  }
+}
+
+/* container 2 - Keep Practicing */
+
+.container2{
+  display: flex;
+  width: 100%;
+  position: relative;
+  top: 4rem;
+}
+
+.column1{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 1.5rem 2rem;
+}
+
+.column1 img{
+  width: 100%;
+}
+
+.column2{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.article{
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.article:hover{
+  transition: background-color 100ms ease-in-out;
+  background-color: rgba(180,100,85);
+}
+
+.article img{
+  width: 35%;
+  height: auto;
+  margin: 1.5rem 1rem;
+}
+
+.content{
+  width: 65%;
+  margin: auto;
+}
+
+.content p a{
+  color: #900C3F;
+  text-decoration: underline;
+}
+
+.time{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.article:last-child{
+  background-color: rgba(210,210,210);
+}
+
+.article:last-child:hover{
+  transition: background-color 100ms ease-in-out;
+  background-color: rgba(180,85,85);
+}
+
+.mobile-column2{
+  display: none;
+}
+
+/* media query - container 2 */
+
+@media only screen and (max-width: 650px){
+  .column1{
+    display: none;
+}
+
+  .column2{
+    display: none;
+  }
+
+  .mobile-column2{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article:last-child{
+    background-color: white;
+  }
+
+  .article-mobile img{
+    width: 90%;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .content-mobile{
+    padding-left: 2rem;
+  }
+
+  .content-mobile p a{
+    color: #900C3F;
+    text-decoration: underline;
+  }
+}
+
+
+/* container 3 - Start Learning */
+.container3{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(180,85,85);
+  position: relative;
+  top: 4rem;
+}
+
+.container3 h1{
+  padding: 2rem 0rem;
+  align-self: center;
+}
+
+.courses{
+  display: flex;
+  margin-right: 4.5rem;
+  margin-left: 4.5rem;
+  margin-bottom: 2rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box{
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 30%;
+}
+
+.box img{
+  width: 100%;
+  height: auto;
+}
+
+.box:hover{
+  transition: background-color 100ms ease-in-out;
+  background-color: white;
+}
+
+.description{
+  margin-left: 1rem;
+}
+
+.description p a{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #900C3F;
+  text-decoration: underline;
+}
+
+.mobile-container3{
+  display: none;
+}
+
+/* media query - container 3 */
+@media only screen and (max-width: 650px){
+  .container3{
+    background-color: white;
+  }
+  .courses{
+    display: none;
+  }
+
+  .mobile-container3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .class-title{
+    display: flex;
+    background-color: rgba(180,85,85);
+    margin: 0.5rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+
+  .class-title:hover{
+    transition: background-color 400ms ease-in-out;
+    background-color: rgba(180,40,85);
+  }
+
+}
+
+/* container 4 - Thesis Exhibit */
+.container4{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  top: 4rem;
+}
+
+.thesis-title{
+  align-self: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.exhibits{
+  display: flex;
+}
+
+.column1-4{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0rem 1.5rem 1.5rem 1.5rem;
+}
+
+.column1-4 video{
+  width: 100%;
+}
+
+.column2-4{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.thesis-box{
+  display: flex;
+  align-items: flex-start;
+}
+
+.thesis-box:first-child{
+  background-color: rgba(210,210,210);
+}
+
+.thesis-box:hover{
+  transition: background-color 100ms ease-in-out;
+  background-color: rgba(180,85,85);
+}
+
+.thesis-box img{
+  padding: 1rem;
+  width: 35%;
+  height: auto;
+}
+
+.thesis-description{
+  align-self: center;
+}
+
+/* media query - container 4 */
+@media only screen and (max-width: 650px){
+  .column2-4{
+    display: none;
+  }
+
+  .column1-4{
+    width: 100%;
+  }
+
+  .column1-4 h3{
+    display: none;
+  }
+
+  .column1-4 p{
+    display: none;
+  }
+}
+
+/* footer */
+footer{
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 4rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  height: 3rem;
+}
+
+footer span{
+  padding: 1rem;
+}
+
+/* media query - footer */
+@media only screen and (max-width: 650px){
+  footer div{
+    display: none;
+  }
+
+  footer span{
+    margin: 1rem;
+  }
+}
